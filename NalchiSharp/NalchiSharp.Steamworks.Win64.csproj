@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="NalchiSharp.props" />
+
+  <ItemGroup>
+    <PackageReference Include="GnsSharp.Steamworks.Win64" Version="$(GnsSharpVersion)" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);NALCHI_SHARP_PLATFORM_WINDOWS</DefineConstants>
+  </PropertyGroup>
+
+</Project>

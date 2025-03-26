@@ -1,0 +1,43 @@
+<Project>
+
+  <PropertyGroup>
+    <RootNamespace>NalchiSharp</RootNamespace>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>13</LangVersion>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/nalchi-net/NalchiSharp</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/nalchi-net/NalchiSharp</PackageProjectUrl>
+    <Copyright>Copyright 2025 Guyeon Yu &lt;copyrat90@gmail.com&gt;</Copyright>
+    <Company>nalchi-net</Company>
+    <Authors>copyrat90</Authors>
+    <Description>Utilities for efficient message sending over Valve's GameNetworkingSockets.</Description>
+    <Version>0.1.0-alpha.1</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <GnsSharpVersion>0.1.0-alpha.7</GnsSharpVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.556">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+
+</Project>
