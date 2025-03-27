@@ -34,3 +34,8 @@ I don't provide them here, for the same reason as in [GnsSharp](https://github.c
 So, bring your own native dll/dylib/so files by:
 * Buiding the [GameNetworkingSockets](https://github.com/ValveSoftware/GameNetworkingSockets) on your own, or downloading the Steamworks SDK from the [Steamworks partner site](https://partner.steamgames.com/).
 * Also, build the C++ version of [nalchi](https://github.com/nalchi-net/nalchi) dynamically and bring that dll/dylib/so file too.
+
+### Can you provide the pre-built native libraries?
+
+You can download the pre-built native libraries in [nalchi](https://github.com/nalchi-net/nalchi) repository.\
+Download the one for your platform, that ends with `-Shared`.
