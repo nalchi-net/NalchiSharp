@@ -31,8 +31,8 @@ This is because GNS uses different struct pack size for each platform, and `size
 
 I don't provide them here, for the same reason as in [GnsSharp](https://github.com/nalchi-net/GnsSharp?tab=readme-ov-file#wheres-the-native-libraries).
 
-So, bring your own native dll/dylib/so files by:
-* Buiding the [GameNetworkingSockets](https://github.com/ValveSoftware/GameNetworkingSockets) on your own, or downloading the Steamworks SDK from the [Steamworks partner site](https://partner.steamgames.com/).
+So, bring your own native dll/dylib/so files:
+* Build the [GameNetworkingSockets](https://github.com/ValveSoftware/GameNetworkingSockets) on your own, or download the Steamworks SDK from the [Steamworks partner site](https://partner.steamgames.com/).
 * Also, build the C++ version of [nalchi](https://github.com/nalchi-net/nalchi) dynamically and bring that dll/dylib/so file too.
 
 ### Can you provide the pre-built native libraries?
