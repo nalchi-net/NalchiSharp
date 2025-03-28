@@ -29,7 +29,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <GnsSharpVersion>0.1.0-alpha.7</GnsSharpVersion>
+    <GnsSharpVersion>0.1.0-alpha.8</GnsSharpVersion>
   </PropertyGroup>
 
   <ItemGroup>
