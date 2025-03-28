@@ -1,9 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="NalchiSharp.props" />
-
   <ItemGroup>
-    <PackageReference Include="GnsSharp.Steamworks.Posix64" Version="$(GnsSharpVersion)" />
+    <PackageReference Include="GnsSharp.Steamworks.Posix32" Version="$(GnsSharpVersion)" />
   </ItemGroup>
 
   <PropertyGroup>

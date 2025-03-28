@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Gns.Posix64", "NalchiSharp\NalchiSharp.Gns.Posix64.csproj", "{1822D921-3B88-B82D-09CF-E093FC50A6FF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Gns.Posix64", "NalchiSharp\Gns.Posix64\NalchiSharp.Gns.Posix64.csproj", "{1822D921-3B88-B82D-09CF-E093FC50A6FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Gns.Posix32", "NalchiSharp\NalchiSharp.Gns.Posix32.csproj", "{B185A98C-CD42-1FDD-50D5-8763C7224D69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Gns.Posix32", "NalchiSharp\Gns.Posix32\NalchiSharp.Gns.Posix32.csproj", "{B185A98C-CD42-1FDD-50D5-8763C7224D69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Gns.Win64", "NalchiSharp\NalchiSharp.Gns.Win64.csproj", "{DF2FE74E-B391-D402-17E5-FD73254C7F40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Gns.Win64", "NalchiSharp\Gns.Win64\NalchiSharp.Gns.Win64.csproj", "{DF2FE74E-B391-D402-17E5-FD73254C7F40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Gns.Win32", "NalchiSharp\NalchiSharp.Gns.Win32.csproj", "{D2B4F969-4637-4B6E-2114-2FAB2B484F14}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Gns.Win32", "NalchiSharp\Gns.Win32\NalchiSharp.Gns.Win32.csproj", "{D2B4F969-4637-4B6E-2114-2FAB2B484F14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Steamworks.Posix64", "NalchiSharp\NalchiSharp.Steamworks.Posix64.csproj", "{C32CB310-0A83-1E63-9AEF-E5D9F089C03C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Steamworks.Posix64", "NalchiSharp\Steamworks.Posix64\NalchiSharp.Steamworks.Posix64.csproj", "{C32CB310-0A83-1E63-9AEF-E5D9F089C03C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Steamworks.Posix32", "NalchiSharp\NalchiSharp.Steamworks.Posix32.csproj", "{917197BE-6582-78AA-F49B-E4B713339EC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Steamworks.Posix32", "NalchiSharp\Steamworks.Posix32\NalchiSharp.Steamworks.Posix32.csproj", "{917197BE-6582-78AA-F49B-E4B713339EC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Steamworks.Win64", "NalchiSharp\NalchiSharp.Steamworks.Win64.csproj", "{1A0A61E6-776C-8B80-0725-E508B8EB1743}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Steamworks.Win64", "NalchiSharp\Steamworks.Win64\NalchiSharp.Steamworks.Win64.csproj", "{1A0A61E6-776C-8B80-0725-E508B8EB1743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Steamworks.Win32", "NalchiSharp\NalchiSharp.Steamworks.Win32.csproj", "{78D064A0-A065-81B8-7783-45DE18513D3C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NalchiSharp.Steamworks.Win32", "NalchiSharp\Steamworks.Win32\NalchiSharp.Steamworks.Win32.csproj", "{78D064A0-A065-81B8-7783-45DE18513D3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

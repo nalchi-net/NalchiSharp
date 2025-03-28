@@ -1,9 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="NalchiSharp.props" />
-
   <ItemGroup>
-    <PackageReference Include="GnsSharp.Gns.Win64" Version="$(GnsSharpVersion)" />
+    <PackageReference Include="GnsSharp.Steamworks.Win64" Version="$(GnsSharpVersion)" />
   </ItemGroup>
 
   <PropertyGroup>
