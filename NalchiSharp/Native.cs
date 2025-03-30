@@ -401,13 +401,13 @@ internal static partial class Native
 
     [LibraryImport(NalchiLibraryName)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-    public static partial void nalchi_socket_extensions_unicast(IntPtr sockets, HSteamNetConnection connection, SharedPayload payload, int logical_bytes_length, ESteamNetworkingSendType send_flags, out long out_message_number_or_result);
+    public static partial void nalchi_socket_extensions_unicast(IntPtr sockets, HSteamNetConnection connection, SharedPayload payload, int logical_bytes_length, ESteamNetworkingSendType send_flags, out long out_message_number_or_result, ushort lane, long user_data);
 
     [LibraryImport(NalchiLibraryName)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-    public static partial void nalchi_socket_extensions_unicast(IntPtr sockets, HSteamNetConnection connection, SharedPayload payload, int logical_bytes_length, ESteamNetworkingSendType send_flags, IntPtr out_message_number_or_result);
+    public static partial void nalchi_socket_extensions_unicast(IntPtr sockets, HSteamNetConnection connection, SharedPayload payload, int logical_bytes_length, ESteamNetworkingSendType send_flags, IntPtr out_message_number_or_result, ushort lane, long user_data);
 
     [LibraryImport(NalchiLibraryName)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
-    public static partial void nalchi_socket_extensions_multicast(IntPtr sockets, uint connections_count, ReadOnlySpan<HSteamNetConnection> connections, SharedPayload payload, int logical_bytes_length, ESteamNetworkingSendType send_flags, Span<long> out_message_number_or_result);
+    public static partial void nalchi_socket_extensions_multicast(IntPtr sockets, uint connections_count, ReadOnlySpan<HSteamNetConnection> connections, SharedPayload payload, int logical_bytes_length, ESteamNetworkingSendType send_flags, Span<long> out_message_number_or_result, ushort lane, long user_data);
 }

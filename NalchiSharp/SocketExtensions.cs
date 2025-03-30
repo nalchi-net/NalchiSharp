@@ -28,9 +28,11 @@ public static class SocketExtensions
     /// <param name="logicalBytesLength">Logical number of bytes of the payload.</param>
     /// <param name="sendFlags">Send flags. See <a href="https://partner.steamgames.com/doc/api/steamnetworkingtypes#message_sending_flags">message sending flags</a> on the Steamworks docs.</param>
     /// <param name="outMessageNumberOrResult">Optional parameter to receive the message number if successful, or a negative <see cref="EResult"/> value if failed.</param>
-    public static void Unicast(this ISteamNetworkingSockets sockets, HSteamNetConnection connection, SharedPayload payload, int logicalBytesLength, ESteamNetworkingSendType sendFlags, out long outMessageNumberOrResult)
+    /// <param name="lane">Optional lane index. See <see cref="ISteamNetworkingSockets.ConfigureConnectionLanes"/> for details.</param>
+    /// <param name="userData">Optional user data.</param>
+    public static void Unicast(this ISteamNetworkingSockets sockets, HSteamNetConnection connection, SharedPayload payload, int logicalBytesLength, ESteamNetworkingSendType sendFlags, out long outMessageNumberOrResult, ushort lane = 0, long userData = 0)
     {
-        Native.nalchi_socket_extensions_unicast(sockets.Ptr, connection, payload, logicalBytesLength, sendFlags, out outMessageNumberOrResult);
+        Native.nalchi_socket_extensions_unicast(sockets.Ptr, connection, payload, logicalBytesLength, sendFlags, out outMessageNumberOrResult, lane, userData);
     }
 
     /// <summary>
@@ -47,9 +49,11 @@ public static class SocketExtensions
     /// <param name="payload">Payload to send.</param>
     /// <param name="logicalBytesLength">Logical number of bytes of the payload.</param>
     /// <param name="sendFlags">Send flags. See <a href="https://partner.steamgames.com/doc/api/steamnetworkingtypes#message_sending_flags">message sending flags</a> on the Steamworks docs.</param>
-    public static void Unicast(this ISteamNetworkingSockets sockets, HSteamNetConnection connection, SharedPayload payload, int logicalBytesLength, ESteamNetworkingSendType sendFlags)
+    /// <param name="lane">Optional lane index. See <see cref="ISteamNetworkingSockets.ConfigureConnectionLanes"/> for details.</param>
+    /// <param name="userData">Optional user data.</param>
+    public static void Unicast(this ISteamNetworkingSockets sockets, HSteamNetConnection connection, SharedPayload payload, int logicalBytesLength, ESteamNetworkingSendType sendFlags, ushort lane = 0, long userData = 0)
     {
-        Native.nalchi_socket_extensions_unicast(sockets.Ptr, connection, payload, logicalBytesLength, sendFlags, IntPtr.Zero);
+        Native.nalchi_socket_extensions_unicast(sockets.Ptr, connection, payload, logicalBytesLength, sendFlags, IntPtr.Zero, lane, userData);
     }
 
     /// <summary>
@@ -67,9 +71,11 @@ public static class SocketExtensions
     /// <param name="logicalBytesLength">Logical number of bytes of the payload.</param>
     /// <param name="sendFlags">Send flags. See <a href="https://partner.steamgames.com/doc/api/steamnetworkingtypes#message_sending_flags">message sending flags</a> on the Steamworks docs.</param>
     /// <param name="outMessageNumberOrResult">Optional parameter to receive the message number if successful, or a negative <see cref="EResult"/> value if failed.</param>
-    public static void Multicast(this ISteamNetworkingSockets sockets, ReadOnlySpan<HSteamNetConnection> connections, SharedPayload payload, int logicalBytesLength, ESteamNetworkingSendType sendFlags, Span<long> outMessageNumberOrResult)
+    /// <param name="lane">Optional lane index. See <see cref="ISteamNetworkingSockets.ConfigureConnectionLanes"/> for details.</param>
+    /// <param name="userData">Optional user data.</param>
+    public static void Multicast(this ISteamNetworkingSockets sockets, ReadOnlySpan<HSteamNetConnection> connections, SharedPayload payload, int logicalBytesLength, ESteamNetworkingSendType sendFlags, Span<long> outMessageNumberOrResult, ushort lane = 0, long userData = 0)
     {
-        Native.nalchi_socket_extensions_multicast(sockets.Ptr, (uint)connections.Length, connections, payload, logicalBytesLength, sendFlags, outMessageNumberOrResult);
+        Native.nalchi_socket_extensions_multicast(sockets.Ptr, (uint)connections.Length, connections, payload, logicalBytesLength, sendFlags, outMessageNumberOrResult, lane, userData);
     }
 
     /// <summary>
@@ -86,8 +92,10 @@ public static class SocketExtensions
     /// <param name="payload">Payload to send.</param>
     /// <param name="logicalBytesLength">Logical number of bytes of the payload.</param>
     /// <param name="sendFlags">Send flags. See <a href="https://partner.steamgames.com/doc/api/steamnetworkingtypes#message_sending_flags">message sending flags</a> on the Steamworks docs.</param>
-    public static void Multicast(this ISteamNetworkingSockets sockets, ReadOnlySpan<HSteamNetConnection> connections, SharedPayload payload, int logicalBytesLength, ESteamNetworkingSendType sendFlags)
+    /// <param name="lane">Optional lane index. See <see cref="ISteamNetworkingSockets.ConfigureConnectionLanes"/> for details.</param>
+    /// <param name="userData">Optional user data.</param>
+    public static void Multicast(this ISteamNetworkingSockets sockets, ReadOnlySpan<HSteamNetConnection> connections, SharedPayload payload, int logicalBytesLength, ESteamNetworkingSendType sendFlags, ushort lane = 0, long userData = 0)
     {
-        Multicast(sockets, connections, payload, logicalBytesLength, sendFlags, []);
+        Multicast(sockets, connections, payload, logicalBytesLength, sendFlags, [], lane, userData);
     }
 }
