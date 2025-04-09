@@ -228,6 +228,94 @@ internal static partial class Native
 
     [LibraryImport(NalchiLibraryName)]
     [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial IntPtr nalchi_bit_stream_measurer_construct();
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_destroy(IntPtr self);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial uint nalchi_bit_stream_measurer_used_bytes(IntPtr self);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial uint nalchi_bit_stream_measurer_used_bits(IntPtr self);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_restart(IntPtr self);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_bytes(IntPtr self, ReadOnlySpan<byte> data, uint size);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_bool(IntPtr self, [MarshalAs(UnmanagedType.I1)] bool data);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_s8(IntPtr self, sbyte data, sbyte min, sbyte max);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_u8(IntPtr self, byte data, byte min, byte max);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_s16(IntPtr self, short data, short min, short max);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_u16(IntPtr self, ushort data, ushort min, ushort max);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_s32(IntPtr self, int data, int min, int max);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_u32(IntPtr self, uint data, uint min, uint max);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_s64(IntPtr self, long data, long min, long max);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_u64(IntPtr self, ulong data, ulong min, ulong max);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_float(IntPtr self, float data);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_double(IntPtr self, double data);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_ordinary_string(IntPtr self, [MarshalAs(UnmanagedType.LPStr)] string str);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_wide_string(IntPtr self, [MarshalAs(UnmanagedType.LPWStr)] string str);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_utf8_string(IntPtr self, [MarshalAs(UnmanagedType.LPUTF8Str)] string str);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_utf16_string(IntPtr self, [MarshalAs(UnmanagedType.LPWStr)] string str);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
+    public static partial void nalchi_bit_stream_measurer_write_utf32_string(IntPtr self, IntPtr str);
+
+    [LibraryImport(NalchiLibraryName)]
+    [UnmanagedCallConv(CallConvs = new[] { typeof(CallConvCdecl) })]
     public static partial IntPtr nalchi_bit_stream_reader_construct_default();
 
     [LibraryImport(NalchiLibraryName)]

@@ -25,8 +25,6 @@ public sealed class BitStreamWriter : IDisposable
 {
     private IntPtr ptr;
 
-    private bool disposed;
-
     /// <summary>
     /// <para>
     /// Constructs a <see cref="BitStreamWriter"/> instance without a buffer.
@@ -152,13 +150,12 @@ public sealed class BitStreamWriter : IDisposable
     /// </summary>
     public void Dispose()
     {
-        if (!this.disposed)
+        if (this.ptr != IntPtr.Zero)
         {
             Native.nalchi_bit_stream_writer_destroy(this.ptr);
             this.ptr = IntPtr.Zero;
 
             GC.SuppressFinalize(this);
-            this.disposed = true;
         }
     }
 
@@ -411,6 +408,7 @@ public sealed class BitStreamWriter : IDisposable
     /// <summary>
     /// Writes a UTF-8 string to the bit stream.
     /// </summary>
+    /// <param name="str">String to write.</param>
     /// <returns><see cref="BitStreamWriter"/> The stream itself.</returns>
     public BitStreamWriter WriteUtf8String(string str)
     {
@@ -421,6 +419,7 @@ public sealed class BitStreamWriter : IDisposable
     /// <summary>
     /// Writes a UTF-16 string to the bit stream.
     /// </summary>
+    /// <param name="str">String to write.</param>
     /// <returns><see cref="BitStreamWriter"/> The stream itself.</returns>
     public BitStreamWriter WriteUtf16String(string str)
     {
