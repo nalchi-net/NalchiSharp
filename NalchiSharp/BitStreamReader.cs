@@ -19,6 +19,9 @@ using System.Text;
 /// </summary>
 public sealed class BitStreamReader : IDisposable
 {
+    /// <inheritdoc cref="BitStreamWriter.WordSize"/>
+    public const int WordSize = BitStreamWriter.WordSize;
+
     private IntPtr ptr;
 
     private bool disposed;

@@ -23,6 +23,11 @@ using System;
 /// </remarks>
 public sealed class BitStreamWriter : IDisposable
 {
+    /// <summary>
+    /// Size of the internal word type.
+    /// </summary>
+    public const int WordSize = sizeof(uint);
+
     private IntPtr ptr;
 
     /// <summary>
