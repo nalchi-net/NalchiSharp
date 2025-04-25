@@ -23,7 +23,7 @@
     <Company>nalchi-net</Company>
     <Authors>copyrat90</Authors>
     <Description>Utilities for efficient message sending over Valve's GameNetworkingSockets.</Description>
-    <Version>0.1.0-alpha.7</Version>
+    <Version>0.1.0-alpha.8</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <GnsSharpVersion>0.1.0-alpha.11</GnsSharpVersion>
+    <GnsSharpVersion>0.1.0-alpha.12</GnsSharpVersion>
   </PropertyGroup>
 
   <ItemGroup>
